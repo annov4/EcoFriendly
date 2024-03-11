@@ -9,14 +9,14 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) throws IOException {
 
-        Path inputFile = Paths.get("data.csv");
-        Path outputFile = Files.createFile(inputFile.resolveSibling("EcoUsers.csv")); // создаем новый файл в той же директории
+        Path inputFile = Paths.get("/Users/anastasianovikova/Desktop/java_junior/EcoUsers/data.csv");
+        Path outputFile = Files.createFile(Paths.get(inputFile.getParent().toString(), "EcoUsers.csv"));
         String filePath = String.valueOf(inputFile);
 
-        List<Users> users = parseUsers(filePath); //проверяем всех созданных юзеров
-        for (Users user1 : users) {
-            if (isEcoFriendly(user1)) {
-                saveEcoFriendlyUser(user1, String.valueOf(outputFile));
+        List<Users> users = parseUsers(filePath);
+        for (Users user : users) {
+            if (isEcoFriendly(user)) {
+                saveEcoFriendlyUser(user, String.valueOf(outputFile));
             }
         }
     }
@@ -26,9 +26,9 @@ public class Main {
         try {
             BufferedReader br = new BufferedReader(new FileReader(filePath));
             String line = "";
-            br.readLine(); // пропускаем первую строку
-            while((line = br.readLine()) != null) { // читаем вторую строку
-                String[] values = line.split("\\|"); // чтение происходит по строкам
+            br.readLine();
+            while ((line = br.readLine()) != null) {
+                String[] values = line.split("\\|");
                 Users user = new Users();
                 user.id = Integer.parseInt(values[0]);
                 user.name = values[1];
@@ -39,7 +39,6 @@ public class Main {
                 user.electroCountNight = Integer.parseInt(values[6]);
                 users.add(user);
             }
-
             return users;
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -64,18 +63,9 @@ public class Main {
                     .append(user.gasCount).append("|")
                     .append(user.electroCountDay).append("|")
                     .append(user.electroCountNight).append("\n");
-
             writer.write(sb.toString());
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }
-
-
-
-
-// CONST
-//waterCountDay
-// waterCountNight
-// gasCount
-// electroCountDay
-// electroCountNight
