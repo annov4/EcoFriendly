@@ -1,10 +1,10 @@
 public class Users {
-    private Integer id;
-    private String name;
-    private Integer waterCountDay;
-    private Integer waterCountNight;
-    private Integer gasCount;
-    private Integer electroCountDay;
-    private Integer electroCountNight;
+    public static Integer id;
+    public static String name;
+    public static Integer waterCountDay;
+    public static Integer waterCountNight;
+    public static Integer gasCount;
+    public static Integer electroCountDay;
+    public static Integer electroCountNight;
 
 }
