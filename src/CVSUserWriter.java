@@ -3,14 +3,16 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Path;
 
-public class EcoUserSavedToCVS implements EcoUserSaved {
+public class CVSUserWriter implements UserWriter {
 
     private String outputFile;
-    public EcoUserSavedToCVS(Path outputFile) {
+
+    public CVSUserWriter(Path outputFile) {
         this.outputFile = String.valueOf(outputFile);
     }
+
     @Override
-    public void saveEcoFriendlyUser(User user) {
+    public void writerUser(User user) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(outputFile, true))) {
             StringBuilder sb = new StringBuilder();
             sb.append(user.getId()).append("|")

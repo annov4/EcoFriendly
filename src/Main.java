@@ -1,4 +1,3 @@
-
 import java.io.*;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -12,19 +11,11 @@ public class Main {
         Path outputFile = Paths.get(filePath).resolveSibling("EcoUsers.csv");
 
 
-        List<User> users = new CVSUserReader(filePath).parseUser(new ArrayList<>());
+        List<User> users = new CVSUserReader(filePath).readerUser(new ArrayList<>());
         for (User user : users) {
-            if (isEcoFriendly(user)) {
-                new EcoUserSavedToCVS(outputFile).saveEcoFriendlyUser(user);
+            if (new EcoCompare().isEcoFriendly(user)) {
+                new CVSUserWriter(outputFile).writerUser(user);
             }
         }
     }
-    public static boolean isEcoFriendly(User user) {
-        return user.getWaterCountDay() < Constants.WATER_COUNT_DAY &&
-                user.getWaterCountNight() < Constants.WATER_COUNT_NIGHT &&
-                user.getGasCount() < Constants.GAS_COUNT &&
-                user.getElectroCountDay() < Constants.ELECTRO_COUNT_DAY &&
-                user.getElectroCountNight() < Constants.ELECTRO_COUNT_NIGHT;
-    }
-
 }

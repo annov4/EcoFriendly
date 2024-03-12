@@ -4,13 +4,14 @@ import java.io.IOException;
 import java.util.List;
 
 public class CVSUserReader implements UserReader {
-    private String filePath; // добавляем переменную filePath
+    private String filePath;
 
     public CVSUserReader(String filePath) {
         this.filePath = filePath;
     }
+
     @Override
-    public List<User> parseUser(List<User> users) {
+    public List<User> readerUser(List<User> users) {
         try {
             BufferedReader br = new BufferedReader(new FileReader(filePath));
             String line = "";

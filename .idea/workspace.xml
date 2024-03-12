@@ -4,16 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df36d52f-9f74-45b9-a80c-2b643651a021" name="Changes" comment="new commit">
-      <change afterPath="$PROJECT_DIR$/src/EcoUserSaved.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/EcoUserSavedToCVS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EcoFriendlyUserWriterToCVS.java" beforeDir="false" />
+    <list default="true" id="df36d52f-9f74-45b9-a80c-2b643651a021" name="Changes" comment="next commit">
+      <change afterPath="$PROJECT_DIR$/src/Compare.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/EcoCompare.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CVSUserReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CVSUserReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EcoUserSaved.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserWriter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EcoUserSavedToCVS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CVSUserWriter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ParseUserCVS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CVSUserReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ParsingUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SaveEcoFriendlyUser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UserReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserReader.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +94,14 @@
       <option name="project" value="LOCAL" />
       <updated>1710194326848</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="next commit">
+      <created>1710203899875</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1710203899875</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -104,7 +109,8 @@
     <MESSAGE value="second commit" />
     <MESSAGE value="third commit" />
     <MESSAGE value="new commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="new commit" />
+    <MESSAGE value="next commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="next commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -116,7 +122,7 @@
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
-      <inline-watch fileUrl="file://$PROJECT_DIR$/src/Main.java" line="15">
+      <inline-watch fileUrl="file://$PROJECT_DIR$/src/Main.java" line="14">
         <watch expression="users" language="JAVA" />
       </inline-watch>
     </watches-manager>
