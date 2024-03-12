@@ -4,14 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df36d52f-9f74-45b9-a80c-2b643651a021" name="Changes" comment="third commit">
-      <change afterPath="$PROJECT_DIR$/src/EcoFriendlyUserWriterToCVS.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ParseUserCVS.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ParsingUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SaveEcoFriendlyUser.java" afterDir="false" />
+    <list default="true" id="df36d52f-9f74-45b9-a80c-2b643651a021" name="Changes" comment="new commit">
+      <change afterPath="$PROJECT_DIR$/src/EcoUserSaved.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/EcoUserSavedToCVS.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EcoFriendlyUserWriterToCVS.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ParseUserCVS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CVSUserReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ParsingUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SaveEcoFriendlyUser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,14 +89,22 @@
       <option name="project" value="LOCAL" />
       <updated>1710187938461</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="new commit">
+      <created>1710194326848</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1710194326848</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
     <MESSAGE value="second commit" />
     <MESSAGE value="third commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="third commit" />
+    <MESSAGE value="new commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="new commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -103,15 +113,10 @@
           <properties class="java.nio.file.NoSuchFileException" package="java.nio.file" />
           <option name="timeStamp" value="1" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>23</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
-      <inline-watch fileUrl="file://$PROJECT_DIR$/src/Main.java" line="16">
+      <inline-watch fileUrl="file://$PROJECT_DIR$/src/Main.java" line="15">
         <watch expression="users" language="JAVA" />
       </inline-watch>
     </watches-manager>
