@@ -7,10 +7,10 @@ public class Main {
     public static void main(String[] args) throws IOException {
 
         UserReader reader = new CSVUserReader(Path.of(CSVUserReader.filePath));
-        EcoCompare compare = new EcoCompare(maxConsumption);
+        EcoCompare filter = new EcoCompare(maxConsumption);
         UserWriter writer = new CVSUserWriter(Path.of(CVSUserWriter.outputFile));
         List<User> inputData = reader.readerUser();
-        List<User> ecoUsers = compare.writeEcoUsers(inputData);
+        List<User> ecoUsers = filter.createdEcoUsers(inputData);
         writer.writerUser(ecoUsers);
 
     }

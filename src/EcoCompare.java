@@ -14,7 +14,7 @@ public class EcoCompare {
                 user.getElectroCountDay() < maxConsumption &&
                 user.getElectroCountNight() < maxConsumption;
     }
-    public List<User> writeEcoUsers(List<User> users) {
+    public List<User> createdEcoUsers(List<User> users) {
         EcoCompare ecoCompare = new EcoCompare(Main.maxConsumption);
         List<User> ecoUsers = new ArrayList<>();
         for (User user : users) {
