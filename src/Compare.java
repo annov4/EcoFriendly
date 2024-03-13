@@ -1,3 +1,3 @@
 public interface Compare {
-    boolean isEcoFriendly(User user);
+    boolean isEcoUser (User user, int maxConsumption);
 }

@@ -1,21 +1,35 @@
 import java.io.*;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.List;
 
 public class Main {
     public static void main(String[] args) throws IOException {
 
-        String filePath = "/Users/anastasianovikova/Desktop/java_junior/EcoUsers/data.csv";
-        Path outputFile = Paths.get(filePath).resolveSibling("EcoUsers.csv");
 
+        UserReader reader = new CSVUserReader(Path.of(CSVUserReader.filePath));
 
-        List<User> users = new CVSUserReader(filePath).readerUser(new ArrayList<>());
-        for (User user : users) {
-            if (new EcoCompare().isEcoFriendly(user)) {
-                new CVSUserWriter(outputFile).writerUser(user);
-            }
-        }
+        Compare compare = new EcoCompare(maxConsumption);//значение? нужно установить одно для всех?
+
+        UserWriter writer = new CVSUserWriter(Path.of(CVSUserWriter.outputFile));
+
+        User inputData = reader.readerUser();
+
+        User ecoUsers = compare.compare(inputData);
+
+        writer.writerUser(ecoUsers);
+
     }
 }
+//UserReader reader
+//= new CSVUserReader
+//path);
+//UserFilter filter
+//= new EcoUserFilter
+//maxConsumption);
+//UserWriter writer
+//new CSVUserWriter(
+//path)
+//User[] inputData = reader.read();
+//User[]
+//ecoUsers= filter.filter inputData);
+//writer write(ecoUsers);

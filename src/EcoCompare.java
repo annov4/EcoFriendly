@@ -1,11 +1,14 @@
-public class EcoCompare implements Compare {
-    @Override
-    public boolean isEcoFriendly(User user) {
-        return user.getWaterCountDay() < Constants.WATER_COUNT_DAY &&
-                user.getWaterCountNight() < Constants.WATER_COUNT_NIGHT &&
-                user.getGasCount() < Constants.GAS_COUNT &&
-                user.getElectroCountDay() < Constants.ELECTRO_COUNT_DAY &&
-                user.getElectroCountNight() < Constants.ELECTRO_COUNT_NIGHT;
+import java.util.ArrayList;
+import java.util.List;
 
+public class EcoCompare implements Compare {
+    int maxConsumption = 800;
+    @Override
+    public boolean isEcoUser(User user, int maxConsumption) {
+        return user.getWaterCountDay() < maxConsumption &&
+                user.getWaterCountNight() < maxConsumption &&
+                user.getGasCount() < maxConsumption &&
+                user.getElectroCountDay() < maxConsumption &&
+                user.getElectroCountNight() < maxConsumption;
     }
 }

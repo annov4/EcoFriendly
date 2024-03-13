@@ -1,13 +1,13 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.nio.file.Path;
 import java.util.List;
 
-public class CVSUserReader implements UserReader {
-    private String filePath;
+public class CSVUserReader implements UserReader {
+    public static final String filePath = "/Users/anastasianovikova/Desktop/java_junior/EcoUsers/data.csv";//или в main?
 
-    public CVSUserReader(String filePath) {
-        this.filePath = filePath;
+    public CSVUserReader(Path filePath) {
     }
 
     @Override
