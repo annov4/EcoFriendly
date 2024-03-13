@@ -1,35 +1,17 @@
 import java.io.*;
 import java.nio.file.Path;
-import java.nio.file.Paths;
+import java.util.List;
 
 public class Main {
+    static int maxConsumption = 500;
     public static void main(String[] args) throws IOException {
 
-
         UserReader reader = new CSVUserReader(Path.of(CSVUserReader.filePath));
-
-        Compare compare = new EcoCompare(maxConsumption);//значение? нужно установить одно для всех?
-
+        EcoCompare compare = new EcoCompare(maxConsumption);
         UserWriter writer = new CVSUserWriter(Path.of(CVSUserWriter.outputFile));
-
-        User inputData = reader.readerUser();
-
-        User ecoUsers = compare.compare(inputData);
-
+        List<User> inputData = reader.readerUser();
+        List<User> ecoUsers = compare.writeEcoUsers(inputData);
         writer.writerUser(ecoUsers);
 
     }
 }
-//UserReader reader
-//= new CSVUserReader
-//path);
-//UserFilter filter
-//= new EcoUserFilter
-//maxConsumption);
-//UserWriter writer
-//new CSVUserWriter(
-//path)
-//User[] inputData = reader.read();
-//User[]
-//ecoUsers= filter.filter inputData);
-//writer write(ecoUsers);

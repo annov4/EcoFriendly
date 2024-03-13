@@ -1,5 +1,6 @@
 import java.io.IOException;
+import java.util.List;
 
 public interface UserWriter {
-    void writerUser(User user) throws IOException;
+    void writerUser(List<User> users) throws IOException;
 }

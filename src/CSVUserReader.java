@@ -2,6 +2,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.Path;
+import java.util.ArrayList;
 import java.util.List;
 
 public class CSVUserReader implements UserReader {
@@ -9,9 +10,10 @@ public class CSVUserReader implements UserReader {
 
     public CSVUserReader(Path filePath) {
     }
+    List<User> users = new ArrayList<>();
 
     @Override
-    public List<User> readerUser(List<User> users) {
+    public List<User> readerUser() throws IOException {
         try {
             BufferedReader br = new BufferedReader(new FileReader(filePath));
             String line = "";
